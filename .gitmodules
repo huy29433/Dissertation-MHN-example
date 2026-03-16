@@ -1,0 +1,3 @@
+[submodule "metMHN"]
+	path = metMHN
+	url = git@github.com:cbg-ethz/metMHN.git
