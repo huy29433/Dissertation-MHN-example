@@ -1,0 +1,8 @@
+ipykernel
+jax~=0.4.19
+jaxlib~=0.4.19
+matplotlib
+pandas
+scipy
+ml_dtypes==0.2.0
+mhn~=1.2.0
