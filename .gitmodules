@@ -1,3 +1,6 @@
 [submodule "metMHN"]
 	path = metMHN
 	url = git@github.com:cbg-ethz/metMHN.git
+[submodule "MCMC-sampling-for-MHN"]
+	path = MCMC-sampling-for-MHN
+	url = https://github.com/huy29433/MCMC-sampling-for-MHN.git
