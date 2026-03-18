@@ -5,7 +5,7 @@ from mhn.optimizers import Penalty
 
 mhn_model = mhn.model.oMHN.load(
     f"results/omhn.csv")
-data = np.loadtxt(f"data/primary.csv", delimiter=",", skiprows=1,
+data = np.loadtxt(f"../data/primary.csv", delimiter=",", skiprows=1,
                   usecols=range(1, mhn_model.log_theta.shape[1] + 1), dtype=np.int32)
 
 mcmc_sampler = MCMC(
