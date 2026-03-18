@@ -1,3 +1,5 @@
-# Dissertation Example
+# Dissertation MHN Example
 
-TOTO
+```bash
+pip install -r requirements.txt
+```
