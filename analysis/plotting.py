@@ -6,7 +6,7 @@ import numpy as np
 
 mpl.rcParams["mathtext.fontset"] = "stix"
 mpl.rcParams["font.family"] = "STIXGeneral"
-mpl.rcParams["font.size"] = 6.02249
+mpl.rcParams["font.size"] = 9
 
 
 def oncoplot(data: pd.DataFrame, ax: Axes = None) -> None:
