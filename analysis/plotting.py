@@ -1,4 +1,3 @@
-from analysis.utils import plotting as mcmc_plotting
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -10,6 +9,7 @@ import warnings
 import sys
 sys.path.append("../MCMC-sampling-for-MHN")
 
+from analysis.utils import plotting as mcmc_plotting
 
 mpl.rcParams["mathtext.fontset"] = "stix"
 mpl.rcParams["font.family"] = "STIXGeneral"
