@@ -28,9 +28,12 @@ def oncoplot(data: pd.DataFrame, ax: Axes = None) -> None:
         fig, ax = plt.subplots(figsize=(3, 4))
 
     ax.imshow(data.sort_values(data.columns.to_list()).T,
-              cmap="Greys", interpolation="none")
+              cmap="Greys", interpolation="none").set_rasterized(True)
     ax.set_yticks(np.arange(data.shape[1]), data.columns)
     ax.set_aspect(data.shape[0] / data.shape[1])
+
+    ax.set_xticks([])
+    ax.tick_params(length=0)
 
 
 def plot_theta(
