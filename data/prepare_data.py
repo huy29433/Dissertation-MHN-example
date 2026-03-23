@@ -1,9 +1,5 @@
 import sys
-import matplotlib.pyplot as plt
 import pandas as pd
-import jax.numpy as jnp
-import jax.random as jrp
-import numpy as np
 import jax as jax
 jax.config.update("jax_enable_x64", True)
 
@@ -66,4 +62,6 @@ cleaned = mut_data.loc[~pd.isna(
     mut_data["type"]), muts+["Seeding", "diag_order", "type"]]
 
 cleaned.iloc[:1000].to_csv("paired.csv")
-cleaned[cleaned["type"] != 2].iloc[:1000, :-3:2].to_csv("primary.csv")
+primary = cleaned[cleaned["type"] != 2].iloc[:1000, :-3:2]
+primary.columns = events[:-1]
+primary.to_csv("primary.csv")

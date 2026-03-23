@@ -45,6 +45,5 @@ log_theta_final = np.row_stack((d_p.reshape((1, -1)),
                         d_m.reshape((1, -1)),
                         log_theta))
 
-pd.DataFrame(log_theta_final).to_csv("results/metmhn.csv")
-pd.DataFrame(log_theta_final, columns=[c.rstrip(" PT") for c in df.columns.to_list()[
+pd.DataFrame(log_theta_final, columns=[c.lstrip("P.") for c in df.columns.to_list()[
              :-1:2]]).to_csv("results/metmhn.csv")
