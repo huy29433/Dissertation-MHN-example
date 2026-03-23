@@ -13,15 +13,9 @@ import metmhn.regularized_optimization as reg_opt
 jax.config.update("jax_enable_x64", True)
 
 df = pd.read_csv("../data/paired.csv", index_col=0)
-df.loc[df["Observation Order"] == 0, [
-    c for c in df.columns if c.endswith("MT")]] = 0
-df.loc[df["Observation Order"] == 0, "Observation Order"] = -99
-df["type"] = df["Seeding"] * 3
+dat = jnp.array(df.to_numpy(dtype=np.int8, na_value=-99))
 
-dat = jnp.array(df.to_numpy(dtype=np.int8))
-
-w_corr = df["type"].value_counts()[3] / len(df)
-
+w_corr = 0.65
 log_lams = np.linspace(-3.5, -2.5, 5)
 lams = 10**log_lams
 key = jrp.key(42)
