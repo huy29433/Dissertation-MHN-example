@@ -23,3 +23,7 @@ This repository contains:
 - in [data](data) the paired and unpaired data used in the toy example as well as the script to prepare them.
 - in [run](run) the scripts to train an o/c/metMHN, as well as the MCMC posterior analysis of an MHN and the corresponding results.
 - in [analysis](analysis) the scripts and utitlities to perform the analyses and produce the figures.
+
+## Contact
+
+yanren-linda.hu@ur.de
